@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import ExOne from "./examples/ExOne"
+import ExTwo from "./examples/ExTwo"
+import ExThree from "./examples/ExThree"
+import ExFour from "./examples/ExFour"
+
+// ExOne -- Sem abstração
+// ExTwo -- HOC
+// ExThree -- Render props
+// ExFour -- Hook
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ExFour />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

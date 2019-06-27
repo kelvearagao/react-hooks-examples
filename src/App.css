@@ -1,5 +1,23 @@
 .App {
+  padding: 10px;
   text-align: center;
+  display: grid;
+  --grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / 5;
+}
+
+article {
+  grid-row: 2;
+  grid-column: 1 / 4;
+}
+
+aside {
+  grid-row: 2;
 }
 
 .App-logo {

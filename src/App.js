@@ -7,6 +7,7 @@ import ExThree from "./examples/ExThree"
 import ExFour from "./examples/ExFour"
 import ExEffect from "./examples/ExEffect"
 import ExMemo from "./examples/ExMemo"
+import ExRef from "./examples/ExRef"
 
 // ExOne -- Sem abstração
 // ExTwo -- HOC
@@ -16,7 +17,7 @@ import ExMemo from "./examples/ExMemo"
 function App() {
   return (
     <div className="App">
-      <ExMemo />
+      <ExRef />
     </div>
   )
 }

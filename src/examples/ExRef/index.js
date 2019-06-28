@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
+import "./styles.css"
 import quotes from "./ws"
 
 const Stocks = () => {
@@ -24,12 +25,12 @@ const Stocks = () => {
   }, [isStopped])
 
   return (
-    <>
+    <div className="content">
       <button onClick={() => setIsStopped(false)}>Start</button>{" "}
       <button onClick={() => setIsStopped(true)}>Stop</button>
       <br />
       <br />
-      <table border="1">
+      <table className="table">
         <thead>
           <tr>
             <th>Código</th>
@@ -45,7 +46,7 @@ const Stocks = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 

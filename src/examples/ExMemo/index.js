@@ -1,9 +1,17 @@
 import React, { useState, useEffect, useMemo, useRef } from "react"
+import "./styles.css"
 import axios from "axios"
 
 const SecurityList = ({ items, tableMode }) => {
   return tableMode ? (
-    <table border="1">
+    <table className="table" border="1">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Valor mínimo</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
       <tbody>
         {items.map(item => (
           <tr key={item.securityId}>
@@ -15,13 +23,13 @@ const SecurityList = ({ items, tableMode }) => {
       </tbody>
     </table>
   ) : (
-    <ul>
+    <ol>
       {items.map(item => (
         <li key={item.securityId}>
           {item.issuerName}, R$ {item.minTick}
         </li>
       ))}
-    </ul>
+    </ol>
   )
 }
 
@@ -35,7 +43,6 @@ const useInputFocus = () => {
 }
 
 const filterData = (data, filter) =>
-  console.log("Filtering....") ||
   data.filter(item => !filter || item.minTick <= filter)
 
 const Page = () => {
@@ -61,7 +68,7 @@ const Page = () => {
   }, [filteredData, tableMode])
 
   return (
-    <div>
+    <div className="content">
       <form>
         <label>
           Valor mínimo
@@ -73,8 +80,6 @@ const Page = () => {
           />
         </label>
 
-        <br />
-
         <label>
           Modo tabela
           <input
@@ -83,9 +88,6 @@ const Page = () => {
             onChange={e => setTableMode(e.target.checked)}
           />
         </label>
-
-        <br />
-        <br />
 
         <label>
           Mais filtros

@@ -41,15 +41,22 @@ ol li {
   margin-bottom: 24px;
 }
 
-label {
-  display: block;
-  margin-bottom: 24px;
-}
-
 input {
-  margin-left: 26px;
+  padding: 5px;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-right: 20px;
 }
 
 .content {
   padding: 20px;
+}
+
+form {
+  padding: 0;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 18px;
 }

@@ -62,7 +62,7 @@ export default () => {
   }, [url])
 
   return (
-    <>
+    <div className="content">
       <form
         onSubmit={() =>
           setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`)
@@ -85,19 +85,30 @@ export default () => {
         </button>
       </form>
 
+      <br />
+
       {isError && <div>Something went wrong ...</div>}
 
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-        <ul>
-          {data.hits.map(item => (
-            <li key={item.objectID}>
-              <a href={item.url}>{item.title}</a>
-            </li>
-          ))}
-        </ul>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Author</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.hits.map(item => (
+              <tr key={item.objectID}>
+                <td>{item.author}</td>
+                <td href={item.url}>{item.title}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
-    </>
+    </div>
   )
 }

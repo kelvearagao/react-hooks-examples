@@ -17,7 +17,7 @@ import ExRef from "./examples/ExRef"
 function App() {
   return (
     <div className="App">
-      <ExRef />
+      <ExMemo />
     </div>
   )
 }

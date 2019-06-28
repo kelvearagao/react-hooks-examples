@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useMemo } from "react"
+import React, { useState, useEffect, useMemo, useRef } from "react"
 import axios from "axios"
-import { tsAnyKeyword } from "@babel/types"
 
-const SecurityList = ({ items, tableMode, darkMode }) => {
-  console.log("Render SecurityList")
+const SecurityList = ({ items, tableMode }) => {
   return tableMode ? (
     <table border="1">
       <tbody>
@@ -11,6 +9,7 @@ const SecurityList = ({ items, tableMode, darkMode }) => {
           <tr key={item.securityId}>
             <td>{item.issuerName}</td>
             <td>R$ {item.minTick}</td>
+            <td>{item.securityType}</td>
           </tr>
         ))}
       </tbody>
@@ -26,11 +25,22 @@ const SecurityList = ({ items, tableMode, darkMode }) => {
   )
 }
 
+const useInputFocus = () => {
+  const inputRef = useRef()
+  useEffect(() => {
+    inputRef.current.focus()
+  }, [])
+
+  return inputRef
+}
+
 const filterData = (data, filter) =>
   console.log("Filtering....") ||
   data.filter(item => !filter || item.minTick <= filter)
 
 const Page = () => {
+  const inputRef = useInputFocus()
+
   const [filter, setFilter] = useState("")
   const [data, setData] = useState([])
   const [tableMode, setTableMode] = useState(false)
@@ -56,6 +66,7 @@ const Page = () => {
         <label>
           Valor mínimo
           <input
+            ref={inputRef}
             type="number"
             value={filter}
             onChange={e => setFilter(e.target.value)}

@@ -12,10 +12,11 @@ const BASE_URL = "http://localhost:3000/api-proxy"
 
 const initialRequestDetailState = {
   id: undefined,
+  url: "",
   method: "GET",
   status: 200,
   type: "default",
-  method: undefined,
+  response: undefined,
   query: undefined
 }
 
@@ -65,12 +66,12 @@ export default () => {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(body)
-      }).then(res => res.json())
+        body: JSON.stringify({ ...body })
+      }).then()
 
       setRequestDetail(initialRequestDetailState)
     }
-
+    console.log(data)
     saveRequest(data)
   }
 

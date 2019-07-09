@@ -6,13 +6,13 @@ export default ({ requests, setRequestId, handleDelete }) => (
   <Table striped bordered hover>
     <thead>
       <tr>
-        <th>Requests</th>
-        <th />
+        <th colSpan={3}>Requests</th>
       </tr>
     </thead>
     <tbody>
       {requests.map(req => (
-        <tr>
+        <tr key={req.id}>
+          <td>{req.method}</td>
           <td>
             <a
               href="/"

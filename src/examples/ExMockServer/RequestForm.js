@@ -18,7 +18,7 @@ export default ({ setRequestDetail, handleSave, requestDetail }) => {
       JSON.stringify(requestDetail.query, undefined, 2) || "{}"
     responseRef.current.value =
       JSON.stringify(requestDetail.response, undefined, 2) || "{}"
-  }, [requestDetail.id])
+  }, [requestDetail.id, requestDetail.query, requestDetail.response])
 
   return (
     <>
@@ -34,8 +34,6 @@ export default ({ setRequestDetail, handleSave, requestDetail }) => {
             variant="secondary"
             block
             onClick={() => {
-              //headerRef.current.value = ""
-              //responseRef.current.value = ""
               setRequestDetail({
                 id: "",
                 url: "",

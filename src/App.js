@@ -12,7 +12,8 @@ import Menubar from "./components/Menubar"
 // import ExDualCounter from "./examples/ExDualCounter"
 //import ExUser from "./examples/ExUser"
 //import ExUserList from "./examples/ExUserList"
-import ExMockServer from "./examples/ExMockServer"
+import Example from "./examples/ExMockServer"
+//import Example from "./examples/ExUseState"
 
 // ExOne -- Sem abstração
 // ExTwo -- HOC
@@ -40,7 +41,7 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <ExMockServer />
+    <Example />
     // <Wrapper>
     //   {/* <Menubar /> */}
     //   {/* <h1>Stocks </h1> */}

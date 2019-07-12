@@ -30,12 +30,16 @@ const randomStockUpdater = () => {
     }
   }
 
+  /*
   var randomMSTime = randomInterval(500, 2500)
+
   setTimeout(function() {
     randomStockUpdater()
   }, randomMSTime)
+  */
 }
-randomStockUpdater()
+
+//randomStockUpdater()
 
 const ws = {}
 
@@ -43,12 +47,14 @@ ws.subscribe = (clientStocks, cb) => {
   var clientStockUpdater
 
   const sendStockUpdates = function() {
+    randomStockUpdater()
     var stocksObj = {}
 
     for (var i = 0; i < clientStocks.length; i++) {
       const symbol = clientStocks[i]
       stocksObj[symbol] = stocks[symbol]
     }
+
     cb(stocksObj)
   }
 

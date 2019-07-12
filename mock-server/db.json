@@ -97391,43 +97391,33 @@
       "url": "/casa",
       "status": "200",
       "response": {
-        "id": 123
+        "id": 1234
       },
       "id": "544115d6-f9ec-4d14-9c94-9e45ab52399a"
     },
     {
       "type": "custom",
-      "query": {
-        "nome": "kelve2"
-      },
+      "query": {},
       "method": "GET",
-      "url": "/casa",
-      "status": "200",
+      "url": "/pessoa/1",
+      "status": 200,
       "response": {
-        "id": 123
+        "id": "1",
+        "nome": "kelves default"
       },
-      "id": "e34067d7-80d3-4726-93c2-c53d4144ca9f"
+      "id": "ef23b528-8dfe-404f-8497-f2c42dc52b5b"
     },
     {
       "type": "default",
       "query": {},
       "method": "GET",
-      "url": "/pessoa",
+      "url": "/pessoa/1",
       "status": 200,
-      "response": {},
-      "id": "ef23b528-8dfe-404f-8497-f2c42dc52b5b"
-    },
-    {
-      "type": "custom",
-      "query": {},
-      "method": "POST",
-      "url": "/pessoa",
-      "status": "201",
       "response": {
-        "nome": "kelve",
-        "id": "123"
+        "id": "1",
+        "nome": "kelve"
       },
-      "id": "df8181bd-24f6-49dd-ab4e-09e1bc636e8b"
+      "id": "73d48a30-f55b-4cfc-bded-e922139f1fa2"
     }
   ],
   "scenarios": []

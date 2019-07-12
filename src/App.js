@@ -1,18 +1,18 @@
 import React from "react"
 import "./App.css"
-import styled from "styled-components"
+//import styled from "styled-components"
 // import ExOne from "./examples/ExOne"
 // import ExTwo from "./examples/ExTwo"
 // import ExThree from "./examples/ExThree"
 // import ExFour from "./examples/ExFour"
 // import ExEffect from "./examples/ExEffect"
 // import ExMemo from "./examples/ExMemo"
-// import ExRef from "./examples/ExRef"
-import Menubar from "./components/Menubar"
+import Example from "./examples/ExRef"
+//import Menubar from "./components/Menubar"
 // import ExDualCounter from "./examples/ExDualCounter"
 //import ExUser from "./examples/ExUser"
 //import ExUserList from "./examples/ExUserList"
-import Example from "./examples/ExMockServer"
+//import Example from "./examples/ExMockServer"
 //import Example from "./examples/ExUseState"
 
 // ExOne -- Sem abstração
@@ -20,6 +20,7 @@ import Example from "./examples/ExMockServer"
 // ExThree -- Render props
 // ExFour -- Hook
 
+/*
 const Wrapper = styled.div`
   padding: 32px;
   background-color: ${props => props.theme.background};
@@ -37,7 +38,7 @@ const Wrapper = styled.div`
     width: 550px;
     margin-bottom: 16px;
   }
-`
+`*/
 
 function App() {
   return (

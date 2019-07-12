@@ -64,7 +64,7 @@ button {
 @keyframes bg-green {
   0% {
     color: white;
-    background: green; /* lovely yellow colour */
+    background: green; 
   }
   100% {
     background: none;
@@ -74,7 +74,7 @@ button {
 @keyframes bg-red {
   0% {
     color: white;
-    background: red; /* lovely yellow colour */
+    background: red; 
   }
   100% {
     background: none;

@@ -4,42 +4,9 @@ import "./style.css"
 
 const SEARCH_URL = "http://hn.algolia.com/api/v1/search?query="
 
-const useHackerNewsApi = () => {
-  const [data, setData] = useState({ hits: [] })
-  const [url, setUrl] = useState(
-    "http://hn.algolia.com/api/v1/search?query=redux"
-  )
-  const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState(false)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsError(false)
-      setIsLoading(true)
-
-      try {
-        const result = await axios(url)
-
-        setData(result.data)
-      } catch (error) {
-        setIsError(true)
-      }
-
-      setIsLoading(false)
-    }
-
-    fetchData()
-  }, [url])
-
-  return [{ data, isLoading, isError }, setUrl]
-}
-
 export default () => {
   const [data, setData] = useState({ hits: [] })
   const [query, setQuery] = useState("redux")
-  const [url, setUrl] = useState(
-    "http://hn.algolia.com/api/v1/search?query=redux"
-  )
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
 
@@ -49,7 +16,7 @@ export default () => {
       setIsLoading(true)
 
       try {
-        const result = await axios(url)
+        const result = await axios(SEARCH_URL + query)
         setData(result.data)
       } catch (error) {
         setIsError(true)
@@ -59,32 +26,18 @@ export default () => {
     }
 
     fetchData()
-  }, [url])
+  }, [query])
 
   return (
     <div className="content">
-      <form
-        onSubmit={() =>
-          setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`)
-        }
-      >
-        <input
-          type="text"
-          value={query}
-          onChange={event => setQuery(event.target.value)}
-        />
-        <button
-          type="submit"
-          onClick={event => {
-            setUrl(`http://hn.algolia.com/api/v1/search?query=${query}`)
+      <input
+        type="text"
+        value={query}
+        onChange={event => setQuery(event.target.value)}
+      />
 
-            event.preventDefault()
-          }}
-        >
-          Search
-        </button>
-      </form>
-
+      <br />
+      <br />
       <br />
 
       {isError && <div>Something went wrong ...</div>}

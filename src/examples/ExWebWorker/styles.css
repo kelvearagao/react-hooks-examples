@@ -1,0 +1,114 @@
+.spin {
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  background: red;
+}
+.walkabout-old-school {
+  -webkit-animation: 3s slide-margin linear infinite;
+  animation: 3s slide-margin linear infinite;
+  background: blue;
+}
+.walkabout-new-school {
+  -webkit-animation: 3s slide-transform linear infinite;
+  animation: 3s slide-transform linear infinite;
+  background: green;
+}
+
+.walkabout-new-school-spin {
+  animation: 3s slide-transform linear infinite;
+}
+
+.spin-2 {
+  animation: 3s rotate linear infinite;
+}
+
+.scale-2 {
+  animation: 3s scale linear infinite;
+  background: red;
+}
+
+/* keyframes */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-transform {
+  from {
+    transform: translatex(0);
+  }
+  50% {
+    transform: translatex(300px);
+  }
+  to {
+    transform: translatex(0);
+  }
+}
+@keyframes slide-margin {
+  from {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+/* same keyframes, prefixed */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slide-transform {
+  from {
+    -webkit-transform: translatex(0);
+  }
+  50% {
+    -webkit-transform: translatex(300px);
+  }
+  to {
+    -webkit-transform: translatex(0);
+  }
+}
+@-webkit-keyframes slide-margin {
+  from {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scaleX(4) scaleY(4);
+  }
+}
+
+div.box {
+  width: 30px;
+  height: 30px;
+}
+
+.card {
+  border: 1px solid red;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scaleX(1.5) scaleY(1.5);
+  transition: transform 0.3s;
+}

@@ -1,11 +1,15 @@
 import React from "react"
-import "./App.css"
+//import "./App.css"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 //import styled from "styled-components"
 // import ExOne from "./examples/ExOne"
 // import ExTwo from "./examples/ExTwo"
 // import ExThree from "./examples/ExThree"
 // import ExFour from "./examples/ExFour"
-import Example from "./examples/ExEffect"
+//import Example from "./examples/ExEffect"
+import ExWebWorker from "examples/ExWebWorker"
+import Home from "components/Home"
+import Accordion from "components/Accordion"
 //import Example from "./examples/ExMemo"
 //import Example from "./examples/ExRef"
 //import Menubar from "./components/Menubar"
@@ -42,15 +46,13 @@ const Wrapper = styled.div`
 
 function App() {
   return (
-    <Example />
-    // <Wrapper>
-    //   {/* <Menubar /> */}
-    //   {/* <h1>Stocks </h1> */}
-    //   {/* <ExMemo /> */}
-    //   {/* <ExDualCounter /> */}
-    //   {/* <ExUser userId={1} /> */}
-    //   {/* <ExUserList /> */}
-    // </Wrapper>
+    <Router>
+      <div>
+        <Route path="/" exact component={Home} />
+        <Route path="/web-worker" exact component={ExWebWorker} />
+        <Route path="/accordion" exact component={Accordion} />
+      </div>
+    </Router>
   )
 }
 

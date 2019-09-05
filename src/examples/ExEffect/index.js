@@ -45,7 +45,7 @@ export default () => {
       {isLoading ? (
         <div>Loading ...</div>
       ) : (
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th>Author</th>

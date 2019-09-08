@@ -10,11 +10,13 @@
     "react-dom": "^16.9.0-alpha.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-transition-group": "^4.3.0",
     "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-scripts build",
+    "build": "sh -ac '. .env.${REACT_APP_ENV}; react-app-rewired build'",
+    "build:production": "REACT_APP_ENV=production npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "mock-server": "mock-server start"

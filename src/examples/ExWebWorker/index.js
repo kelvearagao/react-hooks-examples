@@ -36,14 +36,12 @@ const Example = () => {
 
   function handleFibonacciCalc() {
     //workerRef.current.postMessage(number)
-
-    setResult(calcFibonacci(number))
+    //setResult(calcFibonacci(number))
     /*
     setTimeout(() => {
       setResult(calcFibonacci(number))
     }, 1000)
     */
-
     // new Promise(resolve => resolve(calcFibonacci(number))).then(rs => {
     //   setResult(rs)
     // })

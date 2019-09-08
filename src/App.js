@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 import ExWebWorker from "examples/ExWebWorker"
 import Home from "components/Home"
 import Accordion from "components/Accordion"
+import Transition from "components/Transition"
 //import Example from "./examples/ExMemo"
 //import Example from "./examples/ExRef"
 //import Menubar from "./components/Menubar"
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/web-worker" exact component={ExWebWorker} />
         <Route path="/accordion" exact component={Accordion} />
+        <Route path="/transition" exact component={Transition} />
       </div>
     </Router>
   )

@@ -55,7 +55,7 @@ const AccordionBody2 = ({ children, eventKey }) => {
     <AccordionBody
       className={active === eventKey && "show"}
       ref={compRef1}
-      height={dimensions.item1}
+      realHeight={dimensions.item1}
     >
       {children}
     </AccordionBody>

@@ -22,3 +22,8 @@ CMD ["nginx", "-g", "daemon off;"]
 
 #docker container run -p 3030:80 simple-build
 #docker image build -t simple-build .
+
+# GENERATE_SOURCEMAP=true npx react-app-rewired build
+
+# source-map resolve static/js/main.1955f340.chunk.js.map 1 7740    
+

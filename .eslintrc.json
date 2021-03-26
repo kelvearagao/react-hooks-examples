@@ -20,6 +20,13 @@
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-associated-control": [ 2, {
+      "labelComponents": ["CustomInputLabel"],
+      "labelAttributes": ["label"],
+      "controlComponents": ["CustomInput"],
+      "depth": 3
+    }]
   }
 }

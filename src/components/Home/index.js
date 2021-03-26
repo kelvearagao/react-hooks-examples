@@ -6,6 +6,7 @@ export default () => (
     <ul>
       <li>
         <Link to="/web-worker">Web Worker</Link>
+        <Link to="/docker">Docker</Link>
       </li>
     </ul>
   </nav>

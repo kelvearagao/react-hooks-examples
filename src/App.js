@@ -8,9 +8,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 // import ExFour from "./examples/ExFour"
 //import Example from "./examples/ExEffect"
 import ExWebWorker from "examples/ExWebWorker"
+import ExChess from "examples/ExChess"
 import Home from "components/Home"
 import Accordion from "components/Accordion"
 import Transition from "components/Transition"
+import Docker from "components/Pages/Docker"
+import ReactRouter from "components/Pages/Router"
 //import Example from "./examples/ExMemo"
 //import Example from "./examples/ExRef"
 //import Menubar from "./components/Menubar"
@@ -33,6 +36,9 @@ function App() {
         <Route path="/web-worker" exact component={ExWebWorker} />
         <Route path="/accordion" exact component={Accordion} />
         <Route path="/transition" exact component={Transition} />
+        <Route path="/docker" exact component={Docker} />
+        <Route path="/router" component={ReactRouter} />
+        <Route path="/chess" component={ExChess} />
       </div>
     </Router>
   )

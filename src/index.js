@@ -5,6 +5,12 @@ import App from "./App"
 import * as serviceWorker from "./serviceWorker"
 import { ThemeProvider } from "./providers/ThemeProvider"
 
+// window.onerror = function(message, url, line, col, error) {
+//   var elem = document.createElement("div")
+//   elem.innerText = `---> ${message}\n At ${line}:${col} of ${url}`
+//   document.body.appendChild(elem)
+// }
+
 ReactDOM.render(
   <ThemeProvider>
     <App />

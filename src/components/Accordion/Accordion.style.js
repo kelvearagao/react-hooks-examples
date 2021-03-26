@@ -17,11 +17,11 @@ export const AccordionHeader = styled.div`
 
 export const AccordionBody = styled.div`
   overflow: hidden;
-  height: ${({ height }) => (height ? 0 : null)}px;
+  height: ${({ realHeight }) => (realHeight ? 0 : null)}px;
   transition: height 0.5s ease;
 
   &.show {
-    height: ${({ height }) => height}px;
+    height: ${({ realHeight }) => realHeight}px;
     transition: height 0.5s ease;
   }
 `
